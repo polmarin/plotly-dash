@@ -350,8 +350,6 @@ def create_goals_vs_xg(player, game_range, minute_range):
     return fig
 
 
-app = Dash(__name__) 
-
 shot_distribution_graph = html.Div(
     [
         html.H2('Shot Distribution'),
@@ -482,6 +480,8 @@ goals_vs_xg = html.Div(
     }
 )
 
+app = Dash(__name__) 
+server = app.server
 app.layout = html.Div([
     html.Div([
         shot_distribution_graph, assist_distribution_graph, filter, player_heatmap, heatmap_text, shots_by_quarter, goals_vs_xg
