@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+statsbombpy = "*"
+pandas = "*"
+jupyterlab = ">=3"
+ipywidgets = ">=7.6"
+plotly-football-pitch = "*"
+dash = "*"
+unidecode = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
