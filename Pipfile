@@ -11,6 +11,7 @@ ipywidgets = ">=7.6"
 plotly-football-pitch = "*"
 dash = "*"
 unidecode = "*"
+gunicorn = "*"
 
 [dev-packages]
 
