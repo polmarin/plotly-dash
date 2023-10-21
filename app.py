@@ -26,6 +26,8 @@ ORDERED_MATCHDAYS = EVENTS.sort_values('match_date')['match_id'].unique().tolist
 
 # Variables
 div_factor = 3 # CONVERTIR A DROPDOWN
+app = Dash(__name__) 
+server = app.server
 
 @callback(
     Output('player_img', 'src'),
@@ -480,8 +482,6 @@ goals_vs_xg = html.Div(
     }
 )
 
-app = Dash(__name__) 
-server = app.server
 app.layout = html.Div([
     html.Div([
         shot_distribution_graph, assist_distribution_graph, filter, player_heatmap, heatmap_text, shots_by_quarter, goals_vs_xg
